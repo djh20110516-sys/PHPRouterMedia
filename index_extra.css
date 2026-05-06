@@ -1290,4 +1290,59 @@ input[type=range].slider:focus::-ms-fill-upper {
     
 }
 
+/* iOS Safari: 用 SVG 图标替换 Unicode 按钮，避免 emoji 渲染问题 */
+@supports (-webkit-touch-callout: none) {
+    #playerControlPlay,
+    #playerControlPause,
+    #playerControlStop,
+    #playerControlPlayBack,
+    #playerControlPlayFor,
+    #aBackFile,
+    #aNextFile {
+        overflow: hidden;
+        color: transparent !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1.3em;
+        min-width: 2em;
+    }
+
+    /* ▶ 播放 */
+    #playerControlPlay {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='7,3 21,12 7,21' fill='white'/%3E%3C/svg%3E");
+    }
+
+    /* ❚❚ 暂停 */
+    #playerControlPause {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='5' y='3' width='5' height='18' rx='1' fill='white'/%3E%3Crect x='14' y='3' width='5' height='18' rx='1' fill='white'/%3E%3C/svg%3E");
+    }
+
+    /* ⏹ 停止 */
+    #playerControlStop {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='4' y='4' width='16' height='16' rx='2' fill='white'/%3E%3C/svg%3E");
+    }
+
+    /* ◀◀ 快退 - 蓝色方框背景 + 白色左三角 */
+    #playerControlPlayBack {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='5' y='5' width='14' height='14' rx='0' fill='%230078D7'/%3E%3Cpolygon points='12,9 6,12 12,15' fill='white'/%3E%3Cpolygon points='18,9 12,12 18,15' fill='white'/%3E%3C/svg%3E");
+        background-size: 1.8em;
+    }
+
+    /* ▶▶ 快进 - 蓝色方框背景 + 白色右三角 */
+    #playerControlPlayFor {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='5' y='5' width='14' height='14' rx='0' fill='%230078D7'/%3E%3Cpolygon points='6,9 12,12 6,15' fill='white'/%3E%3Cpolygon points='12,9 18,12 12,15' fill='white'/%3E%3C/svg%3E");
+        background-size: 1.8em;
+    }
+
+    /* ⏮ 上一个文件 */
+    #aBackFile {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='4' y='3' width='3' height='18' rx='1' fill='white'/%3E%3Cpolygon points='21,3 10,12 21,21' fill='white'/%3E%3C/svg%3E");
+    }
+
+    /* ⏭ 下一个文件 */
+    #aNextFile {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='3,3 14,12 3,21' fill='white'/%3E%3Crect x='17' y='3' width='3' height='18' rx='1' fill='white'/%3E%3C/svg%3E");
+    }
+}
+
 

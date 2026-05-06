@@ -172,7 +172,7 @@
 	//FOLDERS
 	
 	//Downloads Folder
-	define( 'PPATH_DOWNLOADS', '/home/hao/download/movie' );
+	define( 'PPATH_DOWNLOADS', '/path/to/media' );
 	//Exclude folder in downloads
 	define( 'O_DOWNLOADS_FOLDERS_EXCLUDE', array(
         '/path/to/exclude',
@@ -301,7 +301,7 @@
 	//Encode mode for playtime.php: direct (prefered, direct cat mode and 0cpu), fast, mp4, webm
     	define( 'DLNA_ENCODEMODE', 'direct' );
 	//Base http internal server. Format: http://IP:PORT/
-    	define( 'DLNA_WEB_BASESERVER_HTTP', 'http://192.168.0.31:8100/' );
+    	define( 'DLNA_WEB_BASESERVER_HTTP', 'http://127.0.0.1:8100/' );
     	//Subfolder in server if needed, empty string if not needed. Format: folder/
     	define( 'DLNA_WEB_BASEPATH_HTTP', '' );
     	//URL to base with subfolder. Format: http://IP:PORT/[folder/]
@@ -309,7 +309,7 @@
     	//URL to base with subfolder to dlna folder. Format: http://IP:PORT/[folder/]dlna/
     	define( 'DLNA_WEB_BASEFOLDER', DLNA_WEB_BASEFOLDER_HTTP . 'dlna/' );
     	//BIND IP for internal lan
-	define( 'DLNA_BINDIP', '192.168.0.31' );
+	define( 'DLNA_BINDIP', '127.0.0.1' );
 	
 	//KODI
 	//kodi default playmode: direct, fast, mp4, webm, webm2
